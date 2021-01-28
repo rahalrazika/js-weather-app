@@ -56,7 +56,17 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tailwindcss_tailwind_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tailwindcss/tailwind.css */ \"./node_modules/tailwindcss/tailwind.css\");\n\n\n//# sourceURL=webpack://js-weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tailwindcss_tailwind_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tailwindcss/tailwind.css */ \"./node_modules/tailwindcss/tailwind.css\");\n/* harmony import */ var _modules_weatherContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/weatherContainer */ \"./src/modules/weatherContainer.js\");\n\n\n\ndocument.getElementById('container').innerHTML = (0,_modules_weatherContainer__WEBPACK_IMPORTED_MODULE_1__.default)();\n\nconst fetchWeather = (city) => {\n  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=17e507806c9fd24a8d1f1057c7d359bc`,\n    { mode: 'cors' }).then(response => response.json())\n    .then(response => {\n      console.log(response);\n    });\n};\nfetchWeather('algeria');\n(0,_modules_weatherContainer__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n//# sourceURL=webpack://js-weather-app/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/weatherContainer.js":
+/*!*****************************************!*\
+  !*** ./src/modules/weatherContainer.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n\nconst weatherContainer = () => {\n  const html = `\n    <div class=\"main bg-white shadow-lg rounded-lg p-6  w-max m-2 items-center\">\n    <div class=\" overflow-hidden  p-6 search\">\n    <form class=\" flex  md:flex md:justify-center \">\n        <input class=\"w-4/4 rounded-l p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white\" placeholder=\"city\"/>\n        <button class=\"px-8 rounded-r bg-green-300 hover:bg-green-600  text-white font-bold p-4 uppercase border-white-500 border-t border-b border-r\">search</button>\n    </form>\n    <div class=\"px-6 py-4 weather\">\n      <div class=\"font-bold text-xl text-center city\">weather in algeria</div>\n      <h1 class=\"temp  text-5xl text-center\">24&deg;C</h1>\n      <img class=\"w-full icon  text-center\" src=\"\" alt=\"\">\n        <div class=\"descripton  text-center\">sunny</div>\n        <div class=\"humidity  text-center\">humidity:20%</div>\n        <div class=\"wind  text-center\">wind:0km</div>\n    </div>\n   \n  </div>\n\n</div>`;\n  return html;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (weatherContainer);\n\n\n//# sourceURL=webpack://js-weather-app/./src/modules/weatherContainer.js?");
 
 /***/ })
 
