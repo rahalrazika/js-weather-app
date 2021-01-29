@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: `${path.resolve(__dirname, 'src')}/index.js`,
   output: {
-    filename: 'main.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
@@ -25,6 +25,7 @@ module.exports = {
           'postcss-loader',
         ],
       },
+
       {
         test: /\.(png|jpg|gif)$/i,
         use: [
@@ -36,6 +37,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
       { test: /\.txt$/, use: 'raw-loader' },
     ],
