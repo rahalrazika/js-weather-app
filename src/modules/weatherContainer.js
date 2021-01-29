@@ -11,7 +11,7 @@ const weatherContainer = () => {
           <div class="font-bold text-xl text-center city">weather in algeria</div>
           <h1 class="temp  text-5xl text-center">24&deg;C</h1>
           <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon text-center w-4/12 ml-24" />
-          <div class="description  text-center">Cloudy</div>
+          <div class="description text-center">Cloudy</div>
             <div class="humidity  text-center">Humidity: 60%</div>
             <div class="wind  text-center">Wind speed: 6.2 km/h</div>
         </div>
