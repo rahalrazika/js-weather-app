@@ -3,5 +3,20 @@ import weatherContainer from './modules/weatherContainer';
 import fetchWeather from './modules/weatherfetch';
 
 document.getElementById('container').innerHTML = weatherContainer();
-fetchWeather('manila');
+fetchWeather('algeria');
 weatherContainer();
+
+const search = () => {
+  fetchWeather(document.querySelector('.search-bar').value);
+};
+document.querySelector('.search button').addEventListener('click', () => {
+  search();
+});
+
+document
+  .querySelector('.search-bar')
+  .addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      search();
+    }
+  });
