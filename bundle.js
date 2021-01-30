@@ -60,13 +60,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tail
 
 /***/ }),
 
+/***/ "./src/modules/alert.js":
+/*!******************************!*\
+  !*** ./src/modules/alert.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst customAlert = (message) => {\n  const html = `\n      <div class=\" ml-3 top-0 w-6/12 h-10 text-center bg-red-700 text-white transition-all\">\n        ${message}\n      </div>\n    `;\n\n  return html;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (customAlert);\n\n\n//# sourceURL=webpack://js-weather-app/./src/modules/alert.js?");
+
+/***/ }),
+
 /***/ "./src/modules/displayForm.js":
 /*!************************************!*\
   !*** ./src/modules/displayForm.js ***!
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n\nconst displayWeather = (data) => {\n  const { name } = data;\n  const [icon, description] = [data.weather[0].icon, data.weather[0].description];\n  const { temp, humidity } = data.main;\n  const { speed } = data.wind;\n  document.querySelector('.city').innerText = `Weather in ${name}`;\n  document.querySelector('.icon').src = `https://openweathermap.org/img/wn/${icon}.png`;\n  document.querySelector('.description').innerText = description;\n\n  document.querySelector('.temp').innerText = ` ${Math.round(temp - 273)} °C`;\n  document.querySelector('.humidity').innerText = `Humidity: ${humidity}%`;\n  document.querySelector('.wind').innerText = `Wind speed: ${speed} km/h`;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayWeather);\n\n\n//# sourceURL=webpack://js-weather-app/./src/modules/displayForm.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n\nconst displayWeather = (data) => {\n  const { name } = data;\n  const [icon, description] = [data.weather[0].icon, data.weather[0].description];\n  const { temp, humidity } = data.main;\n  const { speed } = data.wind;\n  document.querySelector('.city').innerText = `Weather in ${name}`;\n  document.querySelector('.icon').src = `https://openweathermap.org/img/wn/${icon}.png`;\n  document.querySelector('.description').innerText = description;\n  document.querySelector('.temp').innerText = ` ${Math.round(temp - 273)} °C`;\n  document.querySelector('.humidity').innerText = `Humidity: ${humidity}%`;\n  document.querySelector('.wind').innerText = `Wind speed: ${speed} km/h`;\n  document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name}')`;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayWeather);\n\n\n//# sourceURL=webpack://js-weather-app/./src/modules/displayForm.js?");
 
 /***/ }),
 
@@ -86,7 +96,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _displayForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayForm */ \"./src/modules/displayForm.js\");\n\n// import customAlert from './alert';\n\nconst fetchWeather = (city) => {\n  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=17e507806c9fd24a8d1f1057c7d359bc`,\n    { mode: 'cors' })\n    .then(response => response.json())\n    .then((data) => (0,_displayForm__WEBPACK_IMPORTED_MODULE_0__.default)(data));\n};\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchWeather);\n\n//# sourceURL=webpack://js-weather-app/./src/modules/weatherfetch.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _displayForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayForm */ \"./src/modules/displayForm.js\");\n/* harmony import */ var _alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./alert */ \"./src/modules/alert.js\");\n\n\n\nconst fetchWeather = (city) => {\n  const apikey = '17e507806c9fd24a8d1f1057c7d359bc';\n  const usrlBase = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apikey}`;\n  fetch(usrlBase, { mode: 'cors' })\n    .then(response => response.json())\n    .then((data) => (0,_displayForm__WEBPACK_IMPORTED_MODULE_0__.default)(data))\n\n  // eslint-disable-next-line no-alert\n  // .catch(() => alert('Invalid cite name please enter a valide name'));\n\n    .catch(\n\n      () => {\n        document.getElementById('container').innerHTML += (0,_alert__WEBPACK_IMPORTED_MODULE_1__.default)('City not found. Please realod the page and try again! ');\n      },\n    );\n};\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchWeather);\n\n//# sourceURL=webpack://js-weather-app/./src/modules/weatherfetch.js?");
 
 /***/ })
 
