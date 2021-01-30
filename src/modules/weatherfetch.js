@@ -3,7 +3,7 @@ import customAlert from './alert';
 
 const fetchWeather = (city) => {
   const apikey = '17e507806c9fd24a8d1f1057c7d359bc';
-  const usrlBase = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apikey}`;
+  const usrlBase = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apikey}`;
   fetch(usrlBase, { mode: 'cors' })
     .then(response => response.json())
     .then((data) => displayWeather(data))
