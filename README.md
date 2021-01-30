@@ -14,7 +14,7 @@ A simple weather  app built with javascript vanilla,User can find weather from a
 
 
 ## Live Demo 🚀
-[Weather app]()
+[Weather app](https://rahalrazika.github.io/js-weather-app/)
 
 ## Getting Started 💻
 
@@ -27,7 +27,7 @@ $ cd <folder>
 ```
 
 ```
-$ git clone git@github.com:rahalrazika/to-do-list.git
+$ git clone git@github.com:rahalrazika/js-weather-app.git
 ```
 
 
