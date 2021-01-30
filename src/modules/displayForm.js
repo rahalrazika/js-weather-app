@@ -10,7 +10,7 @@ const displayWeather = (data) => {
   document.querySelector('.temp').innerText = ` ${Math.round(temp - 273)} °C`;
   document.querySelector('.humidity').innerText = `Humidity: ${humidity}%`;
   document.querySelector('.wind').innerText = `Wind speed: ${speed} km/h`;
-  document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${description}')`;
+  document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name}')`;
 };
 
 export default displayWeather;
