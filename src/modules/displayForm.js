@@ -9,7 +9,7 @@ const displayWeather = (data) => {
   document.querySelector('.icon').src = `https://openweathermap.org/img/wn/${icon}.png`;
   document.querySelector('.description').innerText = description;
   // document.querySelector('.temp').innerText = ` ${Math.round(temp - 273)} °C`;
-  document.querySelector('.temp').addEventListener('click', () => {unite(temp);});
+  document.querySelector('.temp').addEventListener('click', () => { unite(temp); });
   document.querySelector('.humidity').innerText = `Humidity: ${humidity}%`;
   document.querySelector('.wind').innerText = `Wind speed: ${speed} km/h`;
   document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name},${description})`;
