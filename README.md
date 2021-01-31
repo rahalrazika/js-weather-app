@@ -1,6 +1,6 @@
 # js-weather-app
-A simple weather  app built with javascript vanilla,User can find weather from anywhere around the world using city names.
- The goal of this project was work with API's .
+A simple weather  app built with javascript vanilla,User can find weather from anywhere around the world using city name.
+ The goal of this project was work with API's using promises and asyncronous functions  .
 ## Screenshots
 ![Home Page](Screenshot.png)
 
@@ -11,6 +11,7 @@ A simple weather  app built with javascript vanilla,User can find weather from a
 - Javascript
 - Html
 - Webpack
+- Tailwind
 
 
 ## Live Demo 🚀
@@ -29,7 +30,14 @@ $ cd <folder>
 ```
 $ git clone git@github.com:rahalrazika/js-weather-app.git
 ```
+```
+Run npm install for installing all the dependencies.
 
+```
+```
+Open the index.html with your preferred browser
+
+```
 
 ## Author
 
