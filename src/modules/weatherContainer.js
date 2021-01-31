@@ -9,7 +9,7 @@ const weatherContainer = () => {
     </div>
     <div class="px-6 py-4 weather">
           <div class="font-bold text-xl text-center city">weather in algeria</div>
-          <h1 class="temp  text-5xl text-center">24&deg;C</h1>
+          <div class="temp  text-5xl text-center">24&deg;C</div>
           <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon text-center w-4/12 ml-24" />
           <div class="description text-center">Cloudy</div>
             <div class="humidity  text-center">Humidity: 60%</div>

@@ -7,10 +7,6 @@ const fetchWeather = (city) => {
   fetch(usrlBase, { mode: 'cors' })
     .then(response => response.json())
     .then((data) => displayWeather(data))
-
-  // eslint-disable-next-line no-alert
-  // .catch(() => alert('Invalid cite name please enter a valide name'));
-
     .catch(
 
       () => {
