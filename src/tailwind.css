@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color:black ;
+background-image: url('https://source.unsplash.com/1600x900/?landscape');
+}
