@@ -12,7 +12,7 @@ const search = () => {
 };
 
 document.querySelector('.search button').addEventListener('click', () => {
-  fetchWeather();
+  fetchWeather('city');
   search();
 });
 
@@ -20,7 +20,7 @@ document
   .querySelector('.search-bar')
   .addEventListener('keyup', (event) => {
     if (event.key === 'Enter') {
-      fetchWeather();
+      fetchWeather('city');
       search();
     }
   });
