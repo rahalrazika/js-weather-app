@@ -1,7 +1,7 @@
 
 const weatherContainer = () => {
   const html = `
-    <div class="main bg-white shadow-lg rounded-lg p-6  w-max m-2 items-center">
+    <div class="main bg-white shadow-lg rounded-lg p-6  w-max ">
     <div class=" overflow-hidden  p-6 search">
     <div class=" flex  md:flex md:justify-center ">
         <input class="search-bar w-4/4 rounded-l p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white" placeholder="city"/>
