@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tail
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst customAlert = (message) => {\n  const html = `\n      <div class=\" ml-3 top-0 w-6/12 h-10 text-center bg-red-700 text-white transition-all\">\n        ${message}\n      </div>\n    `;\n\n  return html;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (customAlert);\n\n\n//# sourceURL=webpack://js-weather-app/./src/modules/alert.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst customAlert = (message) => {\n  const html = `\n      <div class=\"  top-0 w-full h-10 text-center bg-red-700 text-white transition-all\">\n        ${message}\n      </div>\n    `;\n\n  return html;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (customAlert);\n\n\n//# sourceURL=webpack://js-weather-app/./src/modules/alert.js?");
 
 /***/ }),
 
