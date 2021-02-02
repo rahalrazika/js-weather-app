@@ -1,6 +1,6 @@
 const customAlert = (message) => {
   const html = `
-      <div class=" ml-3 top-0 w-6/12 h-10 text-center bg-red-700 text-white transition-all">
+      <div class="  top-0 w-full h-10 text-center bg-red-700 text-white transition-all">
         ${message}
       </div>
     `;
